@@ -1,7 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:mapas" x:Class="mapas.MainPage">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:local="clr-namespace:mapas" 
+             x:Class="mapas.MainPage">
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <maps:Map
+            x:Name="MyMap"
+            HorizontalOptions="FillAndExpand"
+            IsShowingUser="true"
+            MapType="Street"
+            VerticalOptions="FillAndExpand">
+        </maps:Map>
+        <Slider
+            x:Name="MySlider"
+            Value="0.8"
+            ValueChanged="Handle_ValueChanged">
+        </Slider>
     </StackLayout>
 </ContentPage>
