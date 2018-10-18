@@ -16,6 +16,7 @@
         {
             base.OnAppearing();
             this.Locator();
+            this.MyMap.IsShowingUser = true;
         }
 
         private async void Locator()
